@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>イラスト対戦アプリ（試作）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>イラスト対戦アプリ（試作）</h1>
+
+    <!-- アップロード -->
+    <div class="upload-area">
+      <button class="upload-btn" id="upload-btn">自分の画像を選択</button>
+      <input type="file" id="user-file" accept="image/*" style="display:none;" />
+    </div>
+
+    <div class="battle-area">
+      <!-- ユーザー側 -->
+      <div class="panel">
+        <h2>あなたの画像</h2>
+        <div class="preview"><img id="user-preview" alt="あなたの画像プレビュー" /></div>
+        <div class="score" id="user-score">-- 点</div>
+      </div>
+
+      <!-- NPC側 -->
+      <div class="panel">
+        <h2>PCの画像</h2>
+        <div class="preview"><img id="npc-preview" alt="PCの画像プレビュー" /></div>
+        <div class="score" id="npc-score">-- 点</div>
+      </div>
+    </div>
+
+    <div class="result" id="battle-result"></div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
